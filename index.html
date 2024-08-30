@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="bg">
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/tgf.png" alt="Tej Gyan Foundation" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Uploaded Data
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <a class="dropdown-item" href="index.html">Audios</a>
+                            <a class="dropdown-item" href="index.html">Videos</a>
+                        </div>
+                    </li>
+                    <!-- Other menu items -->
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main content -->
+        <div class="container mt-5 content">
+            <h1>Happy Thoughts</h1>
+            <p>IOT dashboard and Operation Link.</p>
+
+            <!-- Button to link to YouTube video -->
+            <a href="https://www.youtube.com/watch?v=oW07gWEDSNc&ab_channel=SirshreeTejgyan" target="_blank" class="btn btn-primary mb-4">Watch Video</a>
+
+            <h1>Upload and Play Media</h1>
+
+            <!-- Form to upload audio -->
+            <h2>Upload Audio</h2>
+            <form action="/upload/audio" method="post" enctype="multipart/form-data" class="mb-4">
+                <div class="form-group">
+                    <input type="file" name="file" class="form-control-file" accept="audio/*">
+                </div>
+                <button type="submit" class="btn btn-success">Upload Audio</button>
+            </form>
+
+            <!-- Form to upload video -->
+            <h2>Upload Video</h2>
+            <form action="/upload/video" method="post" enctype="multipart/form-data" class="mb-4">
+                <div class="form-group">
+                    <input type="file" name="file" class="form-control-file" accept="video/*">
+                </div>
+                <button type="submit" class="btn btn-success">Upload Video</button>
+            </form>
+            
+            <h2>Audio Player</h2>
+            <audio controls class="mb-4">
+                <source src="/files/your_audio_file.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
+            <h2>Video Player</h2>
+            <video controls width="600" class="mb-4">
+                <source src="/files/your_video_file.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </div>
+    </div>
+
+    <!-- Sidebar navigation -->
+    <nav class="sidebar">
+        <ul class="sidebar__menu">
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link"><i data-feather="home"></i><span>Home</span></a>
+            </li>
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link"><i data-feather="info"></i><span>About Us</span></a>        
+            </li>
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link"><i data-feather="phone"></i><span>Contact</span></a>        
+            </li>
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link"><i data-feather="calendar"></i><span>Shivir</span></a>        
+            </li>
+            <li class="sidebar__item">
+                <a href="#" class="sidebar__link"><i data-feather="book"></i><span>Blogs</span></a>        
+            </li>
+            <li class="sidebar__item">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfD8XhXh_M_6kj3Fgf8kGVQFhFikWwjsJLC7v8d9KpZz9ABRA/viewform" target="_blank" class="sidebar__link"><i data-feather="edit"></i><span>Forms</span></a>        
+            </li>
+        </ul>
+    </nav>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>

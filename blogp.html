@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Blog</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .blog-form {
+            width: 70%;
+        }
+
+        #blog-title {
+            width: 100%;
+            padding: 10px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        #blog-content {
+            width: 100%;
+            height: 500px;
+            padding: 15px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            resize: none;
+        }
+
+        .upload-section {
+            margin-bottom: 20px;
+        }
+
+        .upload-label {
+            display: block;
+            background-color: #eee;
+            padding: 10px;
+            border: 2px dashed #ccc;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .upload-label:hover {
+            background-color: #ddd;
+        }
+
+        #upload-file {
+            display: none;
+        }
+
+        aside {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        aside button {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        aside button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Write a Blog</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">My Blogs</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+            </nav>
+        </header>
+        <main>
+            <div class="blog-form">
+                <input type="text" id="blog-title" placeholder="Blog Title">
+                <textarea id="blog-content" placeholder="Write your blog here..."></textarea>
+                <div class="upload-section">
+                    <label for="upload-file" class="upload-label">
+                        <span>Attach files (video, audio, document, image, etc.)</span>
+                    </label>
+                    <input type="file" id="upload-file" multiple>
+                </div>
+            </div>
+            <aside>
+                <button id="save-draft">Save Draft</button>
+                <button id="preview-blog">Preview</button>
+                <button id="publish-blog">Publish</button>
+            </aside>
+        </main>
+        <footer>
+            <p>&copy; 2024 Blog Platform. All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById('save-draft').addEventListener('click', function() {
+            alert('Draft saved successfully!');
+        });
+
+        document.getElementById('preview-blog').addEventListener('click', function() {
+            alert('Previewing blog...');
+            // Code to preview the blog
+        });
+
+        document.getElementById('publish-blog').addEventListener('click', function() {
+            alert('Blog published successfully!');
+            // Code to publish the blog
+        });
+
+        document.getElementById('upload-file').addEventListener('change', function() {
+            let files = this.files;
+            let message = 'You have selected: ';
+            for (let i = 0; i < files.length; i++) {
+                message += '\n' + files[i].name;
+            }
+            alert(message);
+        });
+    </script>
+</body>
+</html>

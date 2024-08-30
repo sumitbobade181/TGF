@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #141E30, #243B55);
+            color: #fff;
+            text-align: center;
+        }
+        .dashboard-box {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+        .dashboard-box h1 {
+            margin-bottom: 20px;
+        }
+        .dashboard-box p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background: #ff5722;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #e64a19;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-box">
+            <h1>Happy Thoughts</h1>
+            <p>Choose your Log-in</p>
+            <div class="button-container">
+                <a href="file.html/admin_login.html" class="button">Admin Login</a>
+                <a href="costumer_login.html" class="button">Customer Login</a>
+            </div>
+            <a href="index.html" class="button">Go Back to Main Page</a>
+        </div>
+    </div>
+</body>
+</html>

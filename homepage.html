@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <style>
+        .button-link {
+            text-decoration: none;
+        }
+        
+        .button-link button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            text-align: left;
+        }
+        
+        .button-link button:hover {
+            background-color: #0056b3;
+        }
+        
+        .blog-post {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        
+        .blog-post h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Main Row -->
+        <div class="row no-gutters">
+            <!-- Left Sidebar -->
+            <div class="col-2 sidebar">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="uploadaudiop.html" class="button-link">
+                            <button type="button">Upload Audio</button>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="uploadvideo.html" class="button-link">
+                            <button type="button">Upload Video</button>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="uploaddeviceip.html" class="button-link">
+                            <button type="button">Upload Device IP</button>
+                        </a>
+                    </li>
+                    <!-- <li class="list-group-item">
+                        <a href="audioplayer.html" class="button-link">
+                            <button type="button">Audio Player</button>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="videoplayer.html" class="button-link">
+                            <button type="button">Video Player</button>
+                        </a>
+                    </li> -->
+                    
+                    <li class="list-group-item">
+                        <a href="blogp.html" class="button-link">
+                            <button type="button">Write Blog</button>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="form.html" class="button-link">
+                            <button type="button">Form</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Blog Content Area -->
+            <div class="col-8 content">
+                <h1 class="text-white">Blog Updates</h1>
+                <div id="blog-container">
+                    <!-- Dynamic Blog Content will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="col-2 sidebar">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="home.html" class="button-link">
+                            <button type="button">Home</button>
+                        </a>
+                    </li>
+            
+                    <li class="list-group-item">
+                        <a href="devicesandip.html" class="button-link">
+                            <button type="button">Devices and IP</button>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="videofiles.html" class="button-link">
+                            <button type="button">Video Files</button>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="audiofiles.html" class="button-link">
+                            <button type="button">Audio Files</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/homepage.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const blogContainer = document.getElementById('blog-container');
+            const blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+
+            blogPosts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'blog-post';
+                postElement.innerHTML = `<h2>${post.title}</h2><p>${post.content}</p>`;
+                blogContainer.appendChild(postElement);
+            });
+        });
+    </script>
+</body>
+</html>

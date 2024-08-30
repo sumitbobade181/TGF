@@ -1,0 +1,5 @@
+ <h2 class="text-white">Audio Player</h2>
+                <audio controls class="mb-4">
+                    <source src="/files/your_audio_file.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
